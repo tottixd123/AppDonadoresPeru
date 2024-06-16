@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Generl">
+    tools:context=".Activity.General.Generl">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -134,6 +134,7 @@
                         app:cardElevation="3dp">
 
                         <LinearLayout
+                            android:id="@+id/historialbtn"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -174,6 +175,7 @@
                         app:cardElevation="3dp">
 
                         <LinearLayout
+                            android:id="@+id/Reloj"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -214,6 +216,7 @@
                         app:cardElevation="3dp">
 
                         <LinearLayout
+                            android:id="@+id/formulariosVer"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -323,6 +326,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/inicioBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.25"
