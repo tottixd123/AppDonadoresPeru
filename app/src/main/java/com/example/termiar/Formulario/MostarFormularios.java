@@ -34,7 +34,6 @@ public class MostarFormularios  extends AppCompatActivity {
 
     //List<Formulario> formularioGet = new ArrayList<>();
     //List<Formulario> GetFormu = new ArrayList<>();
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

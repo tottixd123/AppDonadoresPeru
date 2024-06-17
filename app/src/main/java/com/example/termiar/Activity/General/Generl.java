@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,15 +29,16 @@ import com.example.termiar.Activity.PerfilGeneral.Perfil;
 import com.example.termiar.Adapter.FormularioAdapter;
 import com.example.termiar.Adapter.TrendsAdapter;
 import com.example.termiar.Domain.TrendSDomain;
+import com.example.termiar.Donacion.Donacion;
+import com.example.termiar.Donacion.DonacionMostar;
 import com.example.termiar.Formulario.Formulario;
 import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.Formulario.MostarFormularios;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
-<<<<<<< HEAD
+
 import com.example.termiar.Network.RetrofitFactory;
-=======
+
 import com.example.termiar.Notificaciones.Notifi;
->>>>>>> 4213df06c404cfee1cb8f078536916fd5ba78f44
 import com.example.termiar.R;
 import com.example.termiar.Activity.Reloj.CountDownTimerHelper;
 import com.example.termiar.Servicios.FormularioService;
@@ -71,8 +73,29 @@ public class Generl extends AppCompatActivity {
         Botton_mostrar();
         Reloj();
         boton_notificaciones();
+        boton_donacione();
+        donaciones_formun();
     }
 
+    private void donaciones_formun() {
+        TextView donaciones_formun=findViewById(R.id.btn_donadores);
+        donaciones_formun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Generl.this, Donacion.class));
+            }
+        });
+    }
+
+    private void boton_donacione() {
+        LinearLayout formulariosVer=findViewById(R.id.formulariosVer);
+        formulariosVer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Generl.this, DonacionMostar.class));
+            }
+    });
+    }
     private void boton_notificaciones() {
         Button boton_notificaciones = findViewById(R.id.button_notificaciones);
         boton_notificaciones.setOnClickListener(new View.OnClickListener() {
@@ -170,7 +193,6 @@ public class Generl extends AppCompatActivity {
 
                 }
             }
-
             @Override
             public void onFailure(Call<List<TrendSDomain>> call, Throwable t) {
                 //NO hay conexion al MOCK

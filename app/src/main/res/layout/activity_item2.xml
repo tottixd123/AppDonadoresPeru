@@ -21,68 +21,38 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textViewUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Usuario"
+            android:text="Donaciones"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewTalla"
+            android:id="@+id/ultima_don"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Talla"
+            android:text="Fecha de Ultima Donacion"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewPeso"
+            android:id="@+id/lug_don"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Peso"
+            android:text="Lugar de Ultima Donacion"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewFechaUltimaDonacion"
+            android:id="@+id/hora_don"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fecha última donación"
+            android:text="Hora Aproximada de Ultima Donacion"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textViewSexo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sexo"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textViewTipoSangre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tipo de sangre"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textViewImpedimentos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Impedimentos"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textViewAceptoTerminos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Acepto términos"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
