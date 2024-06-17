@@ -32,8 +32,8 @@ public class MostarFormularios  extends AppCompatActivity {
     private RecyclerView recyclerViewformularios;
     private FormularioAdapter formularioAdapter;
 
-    List<Formulario> formularioGet = new ArrayList<>();
-
+    //List<Formulario> formularioGet = new ArrayList<>();
+    //List<Formulario> GetFormu = new ArrayList<>();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,8 @@ public class MostarFormularios  extends AppCompatActivity {
         //recyclerViewformularios = findViewById(R.id.recyclerViewformularios);
         //recyclerViewformularios.setLayoutManager(new LinearLayoutManager(this));
 
-
-
+        mostarLocalData();
+        /*
         Button btnMostar=findViewById(R.id.btnMostrar);
         btnMostar.setOnClickListener(new View.OnClickListener()
         {
@@ -53,6 +53,8 @@ public class MostarFormularios  extends AppCompatActivity {
                 mostarLocalData();
             }
         });
+        */
+
 
     }
 
@@ -69,8 +71,18 @@ public class MostarFormularios  extends AppCompatActivity {
                     Log.e("CONEXION","Error de la APP");
                 }else {
                     Log.i("CONEXION","Conexion Correcta");
-                   Log.i("CONEXION",new Gson().toJson(response.body()));
+                    //Log.i("CONEXION",new Gson().toJson(response.body()));
                     Log.i("CONEXION","SI MUESTRA DATOS");
+
+                    List<Formulario>GetFormu = response.body();
+
+                    FormularioAdapter adapter = new FormularioAdapter(GetFormu);
+
+                    RecyclerView rv = findViewById(R.id.recyclerViewformularios);
+                    rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                    rv.setHasFixedSize(true);
+                    rv.setAdapter(adapter);
+
                     /*
                     formularioGet = response.body();
 

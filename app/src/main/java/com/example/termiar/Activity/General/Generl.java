@@ -2,6 +2,7 @@ package com.example.termiar.Activity.General;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -11,15 +12,26 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.termiar.Activity.PerfilGeneral.Perfil;
+import com.example.termiar.Adapter.FormularioAdapter;
 import com.example.termiar.Adapter.TrendsAdapter;
 import com.example.termiar.Domain.TrendSDomain;
+import com.example.termiar.Formulario.Formulario;
 import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.Formulario.MostarFormularios;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
+import com.example.termiar.Network.RetrofitFactory;
 import com.example.termiar.R;
 import com.example.termiar.Activity.Reloj.CountDownTimerHelper;
+import com.example.termiar.Servicios.FormularioService;
+import com.example.termiar.Servicios.NoticiaService;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class Generl extends AppCompatActivity {
     private RecyclerView.Adapter adapterTrendsList;
@@ -99,14 +111,41 @@ public class Generl extends AppCompatActivity {
         });
     }
     private void initRecyclearView(){
-        ArrayList<TrendSDomain> items= new ArrayList<>();
-        items.add(new TrendSDomain("noticia","Nota","trends"));
-        items.add(new TrendSDomain("noticia1","Nota2","trends2"));
-        items.add(new TrendSDomain("noticia","Nota","trends"));
 
-        recyclerViewTrends=findViewById(R.id.view1);
-        recyclerViewTrends.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        adapterTrendsList=new TrendsAdapter(items);
-        recyclerViewTrends.setAdapter(adapterTrendsList);
+        Retrofit retrofit = RetrofitFactory.build2();
+
+        NoticiaService servicio1 = retrofit.create(NoticiaService.class);
+        Call<List<TrendSDomain>> call1 = servicio1.GetNoticias();
+
+        call1.enqueue(new Callback<List<TrendSDomain>>() {
+            @Override
+            public void onResponse(Call<List<TrendSDomain>> call, Response<List<TrendSDomain>> response) {
+                if (!response.isSuccessful()){
+                    Log.e("NOTICIOSA","Error de la APP");
+                }else {
+                    Log.i("NOTICIOSA","Conexion Correcta");
+                    //Log.i("NOTICIOSA",new Gson().toJson(response.body()));
+                    Log.i("NOTICIOSA","SI MUESTRA DATOS");
+
+                    List<TrendSDomain>GetFormu = response.body();
+
+                    TrendsAdapter adapter = new TrendsAdapter(GetFormu);
+
+                    RecyclerView rv = findViewById(R.id.view1);
+                    rv.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
+                    rv.setHasFixedSize(true);
+                    rv.setAdapter(adapter);
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<TrendSDomain>> call, Throwable t) {
+                //NO hay conexion al MOCK
+                Log.e("CONEXION","NO hay conexion al MOCK");
+            }
+        });
+
     }
 }

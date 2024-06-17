@@ -54,4 +54,6 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
+    implementation ("com.squareup.picasso:picasso:2.8")
+
 }

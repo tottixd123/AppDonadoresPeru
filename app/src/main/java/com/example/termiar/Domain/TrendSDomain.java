@@ -1,6 +1,30 @@
 package com.example.termiar.Domain;
 
 public class TrendSDomain {
+
+    private int id;
+    private String title;
+    private String imagen;
+    private String descripcion;
+
+    public TrendSDomain() {
+    }
+
+    public TrendSDomain(int id, String title, String imagen, String descripcion) {
+        this.id = id;
+        this.title = title;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -9,29 +33,19 @@ public class TrendSDomain {
         this.title = title;
     }
 
-    public String getSubtitle() {
-        return subtitle;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
-    public String getPicAddress() {
-        return picAddress;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setPicAddress(String picAddress) {
-        this.picAddress = picAddress;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
-
-    public TrendSDomain(String title, String subtitle, String picAddress) {
-        this.title = title;
-        this.subtitle = subtitle;
-        this.picAddress = picAddress;
-    }
-
-    private String title;
-    private String subtitle;
-    private String picAddress;
 }

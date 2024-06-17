@@ -12,4 +12,11 @@ public class RetrofitFactory {
                 .build();
     }
 
+    public static Retrofit build2(){
+        return new Retrofit .Builder()
+                .baseUrl("https://666f8602f1e1da2be522febe.mockapi.io/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
 }
