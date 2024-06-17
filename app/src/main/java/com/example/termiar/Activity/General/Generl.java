@@ -1,12 +1,25 @@
 package com.example.termiar.Activity.General;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +29,7 @@ import com.example.termiar.Domain.TrendSDomain;
 import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.Formulario.MostarFormularios;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
+import com.example.termiar.Notificaciones.Notifi;
 import com.example.termiar.R;
 import com.example.termiar.Activity.Reloj.CountDownTimerHelper;
 
@@ -24,12 +38,16 @@ import java.util.ArrayList;
 public class Generl extends AppCompatActivity {
     private RecyclerView.Adapter adapterTrendsList;
     private RecyclerView recyclerViewTrends;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_generl);
+        
         initRecyclearView();
         BotonInicio();
         BotonPerfil();
@@ -37,8 +55,19 @@ public class Generl extends AppCompatActivity {
         Button_lugar();
         Botton_mostrar();
         Reloj();
-
+        boton_notificaciones();
     }
+
+    private void boton_notificaciones() {
+        Button boton_notificaciones = findViewById(R.id.button_notificaciones);
+        boton_notificaciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Generl.this, Notifi.class));
+            }
+        });
+    }
+
 
     private void Reloj() {
         LinearLayout Reloj=findViewById(R.id.Reloj);
@@ -59,7 +88,6 @@ public class Generl extends AppCompatActivity {
             }
         });
     }
-
 
     private void Botton_mostrar() {
         LinearLayout historialbtn=findViewById(R.id.historialbtn);

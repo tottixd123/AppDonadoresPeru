@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Termiar"
         tools:targetApi="31">
+
+        <activity
+            android:name=".Notificaciones.Notifi"
+            android:exported="false" />
         <activity
             android:name=".Activity.Reloj.CountDownTimerHelper"
             android:exported="false"
@@ -23,9 +30,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCFQ73GZBBxR4sRKi85ZcEgEoRMJzRkQp8" /> <!-- BroadcastReceiver para detectar cambios en la conectividad -->
-
-
-
         <activity android:name=".Formulario.MostarFormularios" />
         <activity
             android:name=".Activity.Mapa.Map_donaciones"
