@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.termiar.Activity.PerfilGeneral.Perfil;
+import com.example.termiar.Activity.VerMasNoticias.VerMas;
 import com.example.termiar.Adapter.FormularioAdapter;
 import com.example.termiar.Adapter.TrendsAdapter;
 import com.example.termiar.Domain.TrendSDomain;
@@ -39,6 +40,10 @@ import com.example.termiar.Activity.Mapa.Map_donaciones;
 import com.example.termiar.Network.RetrofitFactory;
 
 import com.example.termiar.Notificaciones.Notifi;
+<<<<<<< HEAD
+=======
+
+>>>>>>> LuisRamon
 import com.example.termiar.R;
 import com.example.termiar.Activity.Reloj.CountDownTimerHelper;
 import com.example.termiar.Servicios.FormularioService;
@@ -73,8 +78,12 @@ public class Generl extends AppCompatActivity {
         Botton_mostrar();
         Reloj();
         boton_notificaciones();
+<<<<<<< HEAD
         boton_donacione();
         donaciones_formun();
+=======
+        VerMasMostrar();
+>>>>>>> LuisRamon
     }
 
     private void donaciones_formun() {
@@ -155,6 +164,17 @@ public class Generl extends AppCompatActivity {
              }
          });
      }
+
+     private void VerMasMostrar(){
+         TextView mandoVer = findViewById(R.id.textView11);
+         mandoVer.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 startActivity(new Intent(Generl.this, VerMas.class));
+             }
+         });
+     }
+
     private void BotonPerfil() {
         LinearLayout profileBtn=findViewById(R.id.profileBtn);
         profileBtn.setOnClickListener(new View.OnClickListener() {
