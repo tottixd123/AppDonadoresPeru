@@ -7,14 +7,25 @@ public class TrendSDomain {
     private String imagen;
     private String descripcion;
 
+    private String url;
+
     public TrendSDomain() {
     }
 
-    public TrendSDomain(int id, String title, String imagen, String descripcion) {
+    public TrendSDomain(int id, String title, String imagen, String descripcion, String url) {
         this.id = id;
         this.title = title;
         this.imagen = imagen;
         this.descripcion = descripcion;
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public int getId() {

@@ -1,5 +1,6 @@
 package com.example.termiar.Formulario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -7,12 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.termiar.Activity.General.Generl;
+import com.example.termiar.Activity.Mapa.Map_donaciones;
+import com.example.termiar.Activity.PerfilGeneral.Perfil;
+import com.example.termiar.Activity.VerMasNoticias.VerMas;
 import com.example.termiar.Network.RetrofitFactory;
 import com.example.termiar.R;
 import com.example.termiar.Servicios.FormularioService;
@@ -54,11 +60,17 @@ public class Formulario_Registro extends AppCompatActivity {
         setupSpinner(spinner_sexo, R.array.sexo_options);
         setupSpinner(spinner_tipo_sangre,R.array.tipo_sangre_options);
 
+        BotonInicio();
+        BotonPerfil();
+        Button_formu();
+        Button_lugar();
+
         btn_enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (cb_acepto_terminos.isChecked()){
                     guardarFormulario();
+
                 }else{
                     Toast.makeText(Formulario_Registro.this,"Debe aceptar los terminos y condiciones",Toast.LENGTH_SHORT).show();
                 }
@@ -72,6 +84,46 @@ public class Formulario_Registro extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
     }
+
+    private void BotonInicio() {
+        LinearLayout Inicio =findViewById(R.id.inicioBtn);
+        Inicio.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Formulario_Registro.this, Generl.class));
+            }
+        });
+    }
+
+    private void Button_lugar(){
+        LinearLayout lugarBtn=findViewById(R.id.lugarBtn);
+        lugarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Formulario_Registro.this, Map_donaciones.class));
+            }
+        });
+    }
+
+    private void Button_formu(){
+        LinearLayout configuraicon=findViewById(R.id.configuraicon);
+        configuraicon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Formulario_Registro.this, Formulario_Registro.class));
+            }
+        });
+    }
+    private void BotonPerfil() {
+        LinearLayout profileBtn=findViewById(R.id.profileBtn);
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Formulario_Registro.this, Perfil.class));
+            }
+        });
+    }
+
     private void guardarFormulario(){
 
 
