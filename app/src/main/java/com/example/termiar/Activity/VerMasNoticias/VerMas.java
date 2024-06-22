@@ -23,6 +23,7 @@ import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.Network.RetrofitFactory;
 import com.example.termiar.R;
 import com.example.termiar.Servicios.NoticiaService;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -32,18 +33,19 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class VerMas extends AppCompatActivity {
+    private RecyclerView.Adapter adapterTrendsList;
+    private RecyclerView recyclerViewTrends;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ver_mas);
-
-        initVerMas();
-        BotonInicio();
-        BotonPerfil();
-        Button_formu();
-        Button_lugar();
+        //initVerMas();
+        //BotonInicio();
+       // BotonPerfil();
+        //Button_formu();
+        //Button_lugar();
 
     }
 
@@ -86,6 +88,7 @@ public class VerMas extends AppCompatActivity {
         });
     }
 
+
     private void initVerMas(){
 
         Retrofit retrofit = RetrofitFactory.build2();
@@ -113,6 +116,8 @@ public class VerMas extends AppCompatActivity {
                     rv.setAdapter(adapter);
 
 
+
+
                 }
             }
 
@@ -124,5 +129,6 @@ public class VerMas extends AppCompatActivity {
         });
 
     }
+
 
 }

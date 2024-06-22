@@ -71,6 +71,8 @@ public class Formulario_Registro extends AppCompatActivity {
                 if (cb_acepto_terminos.isChecked()){
                     guardarFormulario();
 
+                    startActivity(new Intent(Formulario_Registro.this, Generl.class));
+
                 }else{
                     Toast.makeText(Formulario_Registro.this,"Debe aceptar los terminos y condiciones",Toast.LENGTH_SHORT).show();
                 }

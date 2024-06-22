@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -17,23 +19,33 @@
         android:theme="@style/Theme.Termiar"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".Donacion.DonacionMostar"
+            android:name=".Activity.Reloj.Cronometro"
+            android:exported="false"
+            android:theme="@style/Theme.Termiar"/>
+        <activity
+            android:name=".Activity.VerMasNoticias.MasNoticias"
             android:exported="false" />
         <activity
-            android:name=".Donacion.Donacion"
-=======
-            android:name=".Activity.VerMasNoticias.VerMas"
->>>>>>> LuisRamon
+            android:name=".Donacion.DonacionMostar"
             android:exported="false" />
+        <activity android:name=".Donacion.Donacion" />
+
+
+        <service
+            android:name=".Activity.Reloj.TimerService"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity
             android:name=".Notificaciones.Notifi"
             android:exported="false" />
-        <activity
+        <!--
+ <activity
             android:name=".Activity.Reloj.CountDownTimerHelper"
             android:exported="false"
             android:theme="@style/Theme.Termiar"
-            tools:ignore="DuplicateActivity" /> <!-- Meta-datos para la API de Google Maps -->
+            tools:ignore="DuplicateActivity" /> Meta-datos para la API de Google Maps
+        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCFQ73GZBBxR4sRKi85ZcEgEoRMJzRkQp8" /> <!-- BroadcastReceiver para detectar cambios en la conectividad -->
