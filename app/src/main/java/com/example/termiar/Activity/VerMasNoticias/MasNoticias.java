@@ -23,7 +23,6 @@ import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.Network.RetrofitFactory;
 import com.example.termiar.R;
 import com.example.termiar.Servicios.NoticiaService;
-import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -32,20 +31,24 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 
-public class VerMas extends AppCompatActivity {
-    private RecyclerView.Adapter adapterTrendsList;
-    private RecyclerView recyclerViewTrends;
+public class MasNoticias extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_ver_mas);
-        //initVerMas();
-        //BotonInicio();
-       // BotonPerfil();
-        //Button_formu();
-        //Button_lugar();
+        setContentView(R.layout.activity_mas_noticias);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        initVerMas();
+        BotonInicio();
+        BotonPerfil();
+        Button_formu();
+        Button_lugar();
 
     }
 
@@ -54,7 +57,7 @@ public class VerMas extends AppCompatActivity {
         Inicio.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(VerMas.this, Generl.class));
+                startActivity(new Intent(MasNoticias.this, Generl.class));
             }
         });
     }
@@ -64,7 +67,7 @@ public class VerMas extends AppCompatActivity {
         lugarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(VerMas.this, Map_donaciones.class));
+                startActivity(new Intent(MasNoticias.this, Map_donaciones.class));
             }
         });
     }
@@ -74,7 +77,7 @@ public class VerMas extends AppCompatActivity {
         configuraicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(VerMas.this, Formulario_Registro.class));
+                startActivity(new Intent(MasNoticias.this, Formulario_Registro.class));
             }
         });
     }
@@ -83,7 +86,7 @@ public class VerMas extends AppCompatActivity {
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(VerMas.this, Perfil.class));
+                startActivity(new Intent(MasNoticias.this, Perfil.class));
             }
         });
     }
@@ -110,7 +113,7 @@ public class VerMas extends AppCompatActivity {
 
                     TrendsAdapter adapter = new TrendsAdapter(GetFormu);
 
-                    RecyclerView rv = findViewById(R.id.viewVerMas);
+                    RecyclerView rv = findViewById(R.id.RecyVerMas);
                     rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                     rv.setHasFixedSize(true);
                     rv.setAdapter(adapter);

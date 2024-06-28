@@ -1,15 +1,24 @@
 package com.example.termiar.Notificaciones;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.Manifest;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.ContextCompat;
+
 
 import com.example.termiar.Activity.General.Generl;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
@@ -19,21 +28,36 @@ import com.example.termiar.Formulario.MostarFormularios;
 import com.example.termiar.R;
 
 public class Notifi extends AppCompatActivity {
+<<<<<<< HEAD
     /*
+=======
+    private static final int MY_PERMISSIONS_REQUEST_VIBRATE = 1;
+>>>>>>> RamaFlaca
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_notifiaciones);
+        // Verificar y solicitar permiso de vibración si es necesario
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.VIBRATE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.VIBRATE},
+                    MY_PERMISSIONS_REQUEST_VIBRATE);
+        } else {
+            // Crear y mostrar la notificación si el permiso ya está otorgado
+        }
+
         BotonInicio();
         BotonPerfil();
         Button_formu();
         Button_lugar();
-
     }
+
+
     private void BotonInicio() {
-        LinearLayout Inicio =findViewById(R.id.inicioBtn);
+        LinearLayout Inicio = findViewById(R.id.inicioBtn);
         Inicio.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -79,6 +103,10 @@ public class Notifi extends AppCompatActivity {
             }
         });
     }
+<<<<<<< HEAD
     */
 
 }
+=======
+}
+>>>>>>> RamaFlaca

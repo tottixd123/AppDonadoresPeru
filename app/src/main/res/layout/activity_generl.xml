@@ -55,26 +55,39 @@
                         app:layout_constraintTop_toTopOf="@+id/imageView7"
                         app:layout_constraintVertical_bias="0.491" />
 
-                    <Button
+                    <ImageView
                         android:id="@+id/button_notificaciones"
-                        android:layout_width="148dp"
-                        android:layout_height="43dp"
-                        android:text="Notificaciones"
+                        android:layout_width="54dp"
+                        android:layout_height="49dp"
+                        android:background="@drawable/notification"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.918"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.943" />
-
+                        app:layout_constraintVertical_bias="1.0" />
+                    <!-- <Button
+                         android:id="@+id/button_notificaciones"
+                         android:layout_width="148dp"
+                         android:layout_height="43dp"
+                         android:text="Notificaciones"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintTop_toTopOf="parent"
+                         app:layout_constraintVertical_bias="0.943" />
+                     -->
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/btn_donadores"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:text="Aqui podras editar tu perfil alv"
-                    android:textColor="@color/white"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="42dp"
+                    android:background="@drawable/background_cuadrado"
+                    android:text=" Registra tu Donacion "
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
@@ -119,7 +132,7 @@
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                     app:layout_constraintEnd_toEndOf="@+id/imageView10"
-                    app:layout_constraintHorizontal_bias="0.431"
+                    app:layout_constraintHorizontal_bias="0.681"
                     app:layout_constraintStart_toStartOf="@+id/imageView10"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
@@ -277,15 +290,23 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
                             android:id="@+id/textView11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="32dp"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/buttVerMas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Ver mas"
-                            android:textAlignment="viewEnd"
-                            android:textColor="@color/dark_blue"
-                            android:textStyle="bold" />
+                            android:text="Ver Mas" />
 
                     </LinearLayout>
 
