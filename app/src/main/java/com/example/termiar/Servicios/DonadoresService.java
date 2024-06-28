@@ -15,7 +15,7 @@ public interface DonadoresService {
     @GET("donaciones")
     Call<List<Donacion_Const>> GetDonacion();
    @POST("donaciones")
-   Call<Donacion_Const> PostCrearDonacion(Donacion_Const donacionesPost);
+   Call<Donacion_Const> PostCrearDonacion(@Body Donacion_Const donacionesPost);
    @DELETE
     Call<Donacion_Const> DeleteDonacion(@Body Donacion donacion);
 }

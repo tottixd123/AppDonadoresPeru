@@ -1,15 +1,19 @@
 package com.example.termiar.Activity.General;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,6 +45,7 @@ import retrofit2.Retrofit;
 public class Generl extends AppCompatActivity {
     private RecyclerView.Adapter adapterTrendsList;
     private RecyclerView recyclerViewTrends;
+    private static final int MY_PERMISSIONS_REQUEST_VIBRATE = 1;
 
 
 
@@ -50,7 +55,7 @@ public class Generl extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_generl);
-        
+
         initRecyclearView();
         VerMasMostrar();
         BotonInicio();
@@ -63,7 +68,6 @@ public class Generl extends AppCompatActivity {
 
         boton_donacione();
         donaciones_formun();
-
 
 
     }
@@ -88,7 +92,7 @@ public class Generl extends AppCompatActivity {
     });
     }
     private void boton_notificaciones() {
-        Button boton_notificaciones = findViewById(R.id.button_notificaciones);
+        ImageView boton_notificaciones = findViewById(R.id.button_notificaciones);
         boton_notificaciones.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

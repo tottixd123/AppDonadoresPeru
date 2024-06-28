@@ -1,5 +1,6 @@
 package com.example.termiar.Donacion;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +14,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.termiar.Activity.General.Generl;
 import com.example.termiar.Formulario.Formulario;
+import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.Network.RetrofitFactory;
 import com.example.termiar.R;
 import com.example.termiar.Servicios.DonadoresService;
@@ -70,6 +73,7 @@ public class Donacion extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<Donacion_Const> call, Response<Donacion_Const> response) {
                     Log.i("CONEXION", new Gson().toJson(response.body()));
+                    startActivity(new Intent(Donacion.this, Generl.class));
                 }
 
                 @Override
