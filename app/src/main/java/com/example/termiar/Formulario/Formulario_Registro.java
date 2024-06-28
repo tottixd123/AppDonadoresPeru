@@ -16,6 +16,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.termiar.Activity.General.Generl;
+import com.example.termiar.Activity.Main.MainActivity;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
 import com.example.termiar.Activity.PerfilGeneral.Perfil;
 import com.example.termiar.Activity.VerMasNoticias.VerMas;
@@ -70,6 +71,7 @@ public class Formulario_Registro extends AppCompatActivity {
             public void onClick(View v) {
                 if (cb_acepto_terminos.isChecked()){
                     guardarFormulario();
+                    startActivity(new Intent(Formulario_Registro.this, Generl.class));
 
                 }else{
                     Toast.makeText(Formulario_Registro.this,"Debe aceptar los terminos y condiciones",Toast.LENGTH_SHORT).show();

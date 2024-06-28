@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.termiar.Activity.General.Generl;
+import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         go_boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Generl.class));
+                startActivity(new Intent(MainActivity.this, Formulario_Registro.class));
             }
         });
         }

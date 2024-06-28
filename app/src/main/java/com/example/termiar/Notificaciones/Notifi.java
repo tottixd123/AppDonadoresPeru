@@ -19,6 +19,7 @@ import com.example.termiar.Formulario.MostarFormularios;
 import com.example.termiar.R;
 
 public class Notifi extends AppCompatActivity {
+    /*
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,4 +79,6 @@ public class Notifi extends AppCompatActivity {
             }
         });
     }
+    */
+
 }
