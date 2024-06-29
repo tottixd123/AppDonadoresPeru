@@ -10,41 +10,47 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/viewVerMas"
-        android:layout_width="391dp"
-        android:layout_height="462dp"
+        android:layout_width="410dp"
+        android:layout_height="173dp"
         android:layout_below="@id/textView14"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/app_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="337dp"
-        android:layout_height="41dp"
+        android:layout_width="375dp"
+        android:layout_height="42dp"
         android:layout_above="@id/viewVerMas"
-        android:layout_marginTop="92dp"
-        android:text="Últimas Noticias"
+        android:layout_marginTop="28dp"
+        android:text="Noticias sobre Donaciones"
         android:textColor="@color/dark_blue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="410dp"
+        android:layout_height="61dp"
         android:layout_gravity="bottom"
         app:backgroundTint="@color/white"
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="50dp"
         app:fabCradleVerticalOffset="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="BottomAppBar">
 
         <LinearLayout

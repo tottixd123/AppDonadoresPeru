@@ -21,7 +21,7 @@ public class DonacionAdapter extends RecyclerView.Adapter<DonacionAdapter.ViewHo
     public int getItemCount(){return donaciones.size();}
     @Override
     public DonacionAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item2,parent,false);
         DonacionAdapter.ViewHolder holder = new DonacionAdapter.ViewHolder(view);
         return holder;
     }
@@ -35,9 +35,9 @@ public class DonacionAdapter extends RecyclerView.Adapter<DonacionAdapter.ViewHo
         lug_don=view.findViewById(R.id.lug_don);
         hora_don=view.findViewById(R.id.hora_don);
 
-        ultima_don.setText("Última donación:"+don.getFechadedonacion());
-        lug_don.setText("Lugar de la última donación:"+don.getLugardedonacion());
-        hora_don.setText("Hora de la última donación:"+don.getHoradedonacion());
+        ultima_don.setText("Última donación: "+don.getFechadedonacion());
+        lug_don.setText("Lugar de la última donación: "+don.getLugardedonacion());
+        hora_don.setText("Hora de la última donación: "+don.getHoradedonacion());
     }
     class ViewHolder extends RecyclerView.ViewHolder{
         public ViewHolder(@NonNull View itemView){

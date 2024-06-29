@@ -1,6 +1,7 @@
 package com.example.termiar.Formulario;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -59,22 +60,37 @@ public class Formulario_Registro extends AppCompatActivity {
 
         setupSpinner(spinner_sexo, R.array.sexo_options);
         setupSpinner(spinner_tipo_sangre,R.array.tipo_sangre_options);
+        // Verificar si los términos ya han sido aceptados
+        SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+        boolean terminosAceptados = preferences.getBoolean("terminos_aceptados", false);
 
-        BotonInicio();
-        BotonPerfil();
-        Button_formu();
-        Button_lugar();
+
+        //BotonInicio();
+        //BotonPerfil();
+        //Button_formu();
+        //Button_lugar();
+        if (terminosAceptados) {
+            // Si los términos ya fueron aceptados, redirigir directamente a la siguiente actividad
+            startActivity(new Intent(Formulario_Registro.this, Generl.class));
+            finish(); // Finalizar la actividad actual para que no se pueda regresar a ella
+        }
 
         btn_enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (cb_acepto_terminos.isChecked()){
-                    guardarFormulario();
 
+                    guardarFormulario();
+                    // Guardar en SharedPreferences que los términos han sido aceptados
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean("terminos_aceptados", true);
+                    editor.apply();
                     startActivity(new Intent(Formulario_Registro.this, Generl.class));
+                    finish();
 
                 }else{
                     Toast.makeText(Formulario_Registro.this,"Debe aceptar los terminos y condiciones",Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
