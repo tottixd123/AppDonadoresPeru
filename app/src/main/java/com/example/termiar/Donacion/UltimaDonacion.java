@@ -17,6 +17,9 @@ import com.example.termiar.Servicios.DonadoresService;
 import com.example.termiar.Servicios.FormularioService;
 import com.google.gson.Gson;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -60,8 +63,16 @@ public class UltimaDonacion extends AppCompatActivity {
                     Log.i("ULTIMACONEXION", new Gson().toJson(response.body()));
 
                     List<Donacion_Const> records = response.body();
+
+                    Collections.sort(records, new Comparator<Donacion_Const>() {
+                        @Override
+                        public int compare(Donacion_Const donacionConst, Donacion_Const t1) {
+                            return 0;
+                        }
+                    });
+
                     if (!records.isEmpty()) {
-                        Donacion_Const latestRecord = records.get(0);
+                        Donacion_Const latestRecord = records.get(records.size() - 1);
                         fechadedonacion.setText(latestRecord.getFechadedonacion().toString());
                         lugardedonacion.setText(latestRecord.getLugardedonacion());
                         horadedonacion.setText(latestRecord.getHoradedonacion());
