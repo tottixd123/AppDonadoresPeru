@@ -1,6 +1,5 @@
 package com.example.termiar.Activity.General;
 
-import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +13,6 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,11 +20,10 @@ import com.example.termiar.Activity.PerfilGeneral.Perfil;
 import com.example.termiar.Activity.Reloj.Cronometro;
 import com.example.termiar.Activity.VerMasNoticias.MasNoticias;
 import com.example.termiar.Adapter.TrendsAdapter;
+import com.example.termiar.Campanas.CampanaMostrar;
 import com.example.termiar.Domain.TrendSDomain;
 import com.example.termiar.Donacion.Donacion;
 import com.example.termiar.Donacion.DonacionMostar;
-import com.example.termiar.Formulario.Formulario_Registro;
-import com.example.termiar.Formulario.MostarFormularios;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
 
 import com.example.termiar.Network.RetrofitFactory;
@@ -84,11 +80,11 @@ public class Generl extends AppCompatActivity {
     }
 
     private void boton_donacione() {
-        LinearLayout formulariosVer=findViewById(R.id.formulariosVer);
+        LinearLayout formulariosVer=findViewById(R.id.campanabtn);
         formulariosVer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Generl.this, DonacionMostar.class));
+                startActivity(new Intent(Generl.this, CampanaMostrar.class));
             }
     });
     }
@@ -128,7 +124,7 @@ public class Generl extends AppCompatActivity {
         historialbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Generl.this, MostarFormularios.class));
+                startActivity(new Intent(Generl.this, DonacionMostar.class));
             }
         });
     }

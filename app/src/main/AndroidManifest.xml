@@ -20,7 +20,14 @@
         android:theme="@style/Theme.Termiar"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".Notificaciones.NotificationDetailsActivity"
+=======
+            android:name=".Campanas.CampanaMostrar"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PerfilGeneral.PerfilUltimo"
+>>>>>>> LuisRamon
             android:exported="false" />
         <activity
             android:name=".Donacion.UltimaDonacion"

@@ -43,11 +43,11 @@ public class DonacionMostar extends AppCompatActivity {
         call4.enqueue(new Callback<List<Donacion_Const>>() {
             @Override
             public void onResponse(Call<List<Donacion_Const>> call, Response<List<Donacion_Const>> response) {
-                if (response.isSuccessful()) {
+                if (!response.isSuccessful()) {
                     Log.e("CONEXION", "CONEXION EXITOSA");
                 }else{
                     Log.i("CONEXION", "CONEXION Correcta");
-                Log.i("CONEXION","Si muestra datos");
+                    Log.i("CONEXION","Si muestra datos");
 
                    List<Donacion_Const>GetDon = response.body();
                     DonacionAdapter adapter = new DonacionAdapter(GetDon);

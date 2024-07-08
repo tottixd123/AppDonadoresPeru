@@ -17,6 +17,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.termiar.Activity.General.Generl;
+import com.example.termiar.Activity.Main.MainActivity;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
 import com.example.termiar.Activity.PerfilGeneral.Perfil;
 import com.example.termiar.Activity.VerMasNoticias.VerMas;
@@ -79,6 +80,10 @@ public class Formulario_Registro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (cb_acepto_terminos.isChecked()){
+
+                    guardarFormulario();
+                    startActivity(new Intent(Formulario_Registro.this, Generl.class));
+
 
                     guardarFormulario();
                     // Guardar en SharedPreferences que los términos han sido aceptados
