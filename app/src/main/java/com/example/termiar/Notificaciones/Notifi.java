@@ -22,11 +22,9 @@ import com.example.termiar.R;
 
 public class Notifi extends AppCompatActivity {
 
-    /*
-=======
-    private static final int MY_PERMISSIONS_REQUEST_VIBRATE = 1;
->>>>>>> RamaFlaca
 
+
+    private static final int MY_PERMISSIONS_REQUEST_VIBRATE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,8 +96,7 @@ public class Notifi extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-<<<<<<< HEAD
-    */
+
 
 }
 

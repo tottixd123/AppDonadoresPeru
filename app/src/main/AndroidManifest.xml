@@ -20,14 +20,11 @@
         android:theme="@style/Theme.Termiar"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
-            android:name=".Notificaciones.NotificationDetailsActivity"
-=======
             android:name=".Campanas.CampanaMostrar"
             android:exported="false" />
+
         <activity
             android:name=".Activity.PerfilGeneral.PerfilUltimo"
->>>>>>> LuisRamon
             android:exported="false" />
         <activity
             android:name=".Donacion.UltimaDonacion"
@@ -52,13 +49,6 @@
         <activity
             android:name=".Notificaciones.Notifi"
             android:exported="false" />
-        <!--
- <activity
-            android:name=".Activity.Reloj.CountDownTimerHelper"
-            android:exported="false"
-            android:theme="@style/Theme.Termiar"
-            tools:ignore="DuplicateActivity" /> Meta-datos para la API de Google Maps
-        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCFQ73GZBBxR4sRKi85ZcEgEoRMJzRkQp8" /> <!-- BroadcastReceiver para detectar cambios en la conectividad -->
