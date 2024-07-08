@@ -1,10 +1,11 @@
 package com.example.termiar.Activity.PerfilGeneral;
 
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.termiar.Activity.General.Generl;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
 import com.example.termiar.Donacion.UltimaDonacion;
+import com.example.termiar.Notificaciones.Notifi;
 import com.example.termiar.R;
 
 public class Perfil extends AppCompatActivity {
@@ -26,7 +28,6 @@ public class Perfil extends AppCompatActivity {
         Boton_salir();
         BotonUltima();
     }
-
     private void Boton_salir() {
         ConstraintLayout botonSalir = findViewById(R.id.btn_salir);
         botonSalir.setOnClickListener(new View.OnClickListener() {
