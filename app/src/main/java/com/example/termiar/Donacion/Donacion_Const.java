@@ -9,14 +9,14 @@ import java.util.Date;
 public class Donacion_Const {
     @PrimaryKey(autoGenerate = true)
     public int id;
-    public Date fechadedonacion;
+    public String fechadedonacion;
     public String lugardedonacion;
     public String horadedonacion;
 
     public Donacion_Const() {
     }
 
-    public Donacion_Const(int id, Date fechadedonacion, String lugardedonacion, String horadedonacion) {
+    public Donacion_Const(int id, String fechadedonacion, String lugardedonacion, String horadedonacion) {
         this.id = id;
         this.fechadedonacion = fechadedonacion;
         this.lugardedonacion = lugardedonacion;
@@ -31,11 +31,11 @@ public class Donacion_Const {
         this.id = id;
     }
 
-    public Date getFechadedonacion() {
+    public String getFechadedonacion() {
         return fechadedonacion;
     }
 
-    public void setFechadedonacion(Date fechadedonacion) {
+    public void setFechadedonacion(String fechadedonacion) {
         this.fechadedonacion = fechadedonacion;
     }
 

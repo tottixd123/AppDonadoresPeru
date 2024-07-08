@@ -20,7 +20,7 @@ public class RetrofitFactory {
     }
 
     public  static Retrofit buiilFecha(){
-        String dateFormat = "MM-DD-YYYY'T'HH:MM:SS";
+        String dateFormat = "YYYY-MM-dd'T'HH:mm:ss";
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(Date.class, new AdapterFecha(dateFormat))
                 .create();
