@@ -183,13 +183,15 @@
                     app:layout_constraintStart_toEndOf="@+id/textView756"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_ultimaD"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_height="match_parent">
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -271,13 +273,15 @@
                     app:layout_constraintTop_toTopOf="@+id/imageView478" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_centrodedonacion"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_height="match_parent">
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:id="@+id/imageView467"
@@ -314,13 +318,15 @@
                     app:layout_constraintStart_toEndOf="@+id/textView78"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_salir"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_height="match_parent">
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:id="@+id/imageView424"

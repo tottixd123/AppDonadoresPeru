@@ -2,8 +2,13 @@ package com.example.termiar.Activity.Mapa;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
+import com.example.termiar.Activity.General.Generl;
+import com.example.termiar.Activity.PerfilGeneral.Perfil;
 import com.example.termiar.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,17 +34,13 @@ public class Map_donaciones extends FragmentActivity implements OnMapReadyCallba
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map_don);
         mapFragment.getMapAsync(this);
-    }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+        BotonInicio();
+        BotonPerfil();
+        Button_lugar();
+
+
+    }
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -55,4 +56,37 @@ public class Map_donaciones extends FragmentActivity implements OnMapReadyCallba
         googleMap.addMarker(new MarkerOptions().position(pD_2).title("Ex Hospital Regional de Cajamarca").snippet("Horarios de Donaciones: 8:00 AM - 5:00 PM"));
 
     }
+
+
+    private void BotonInicio() {
+        LinearLayout Inicio =findViewById(R.id.inicioBtn);
+        Inicio.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Map_donaciones.this, Generl.class));
+            }
+        });
+    }
+
+    private void BotonPerfil() {
+        LinearLayout profileBtn=findViewById(R.id.profileBtn);
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Map_donaciones.this, Perfil.class));
+            }
+        });
+    }
+
+    private void Button_lugar(){
+        LinearLayout lugarBtn=findViewById(R.id.lugarBtn);
+        lugarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Map_donaciones.this, Map_donaciones.class));
+            }
+        });
+    }
+
+
 }

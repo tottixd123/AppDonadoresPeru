@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.SET_ALARM" />
@@ -21,9 +20,12 @@
         android:theme="@style/Theme.Termiar"
         tools:targetApi="31">
         <activity
+            android:name=".Donacion.UltimaDonacion"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Reloj.Cronometro"
             android:exported="false"
-            android:theme="@style/Theme.Termiar"/>
+            android:theme="@style/Theme.Termiar" />
         <activity
             android:name=".Activity.VerMasNoticias.MasNoticias"
             android:exported="false" />
@@ -31,7 +33,6 @@
             android:name=".Donacion.DonacionMostar"
             android:exported="false" />
         <activity android:name=".Donacion.Donacion" />
-
 
         <service
             android:name=".Activity.Reloj.TimerService"

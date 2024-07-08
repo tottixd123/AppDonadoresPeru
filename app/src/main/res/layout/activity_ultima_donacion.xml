@@ -2,45 +2,122 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main98"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.VerMasNoticias.VerMas">
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/viewVerMas"
-        android:layout_width="410dp"
-        android:layout_height="173dp"
-        android:layout_below="@id/textView14"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/app_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.025" />
+    tools:context=".Donacion.UltimaDonacion">
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textView658"
         android:layout_width="375dp"
         android:layout_height="42dp"
-        android:layout_above="@id/viewVerMas"
-        android:layout_marginTop="28dp"
-        android:text="Noticias sobre Donaciones"
+        android:layout_marginTop="64dp"
+        android:text="Ultima Donación"
         android:textColor="@color/dark_blue"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:padding="8dp"
+        android:text="Fecha de Donacion "
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fechadedonacion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fechadedonacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="12dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:text="Fecha de Donacion"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView658"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        android:text="Lugar de Donacion"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lugardedonacion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lugardedonacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="229dp"
+        android:layout_marginBottom="13dp"
+        android:padding="8dp"
+        android:text="Lugar de Donacion"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechadedonacion"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="24dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:text="Hora De Donacion"
+
+        app:layout_constraintBottom_toTopOf="@+id/horadedonacion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/horadedonacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="277dp"
+        android:padding="8dp"
+        android:text="Hora de Donacion"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lugardedonacion"
+        tools:ignore="MissingConstraints" />
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/app_bar"
-        android:layout_width="410dp"
-        android:layout_height="61dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:layout_marginTop="197dp"
         app:backgroundTint="@color/white"
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="50dp"
@@ -49,9 +126,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="BottomAppBar">
+        app:layout_constraintTop_toBottomOf="@+id/horadedonacion"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,18 +220,17 @@
                     android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
-                    app:srcCompat="@drawable/configuraciones" />
+                    app:srcCompat="@drawable/cerrar_sesion_alt" />
 
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Configuracion"
+                    android:text="Salir"
                     android:textAlignment="center" />
 
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.bottomappbar.BottomAppBar>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

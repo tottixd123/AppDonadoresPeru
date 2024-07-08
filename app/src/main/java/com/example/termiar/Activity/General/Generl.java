@@ -1,6 +1,7 @@
 package com.example.termiar.Activity.General;
 
 import android.app.PendingIntent;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -60,12 +62,11 @@ public class Generl extends AppCompatActivity {
         VerMasMostrar();
         BotonInicio();
         BotonPerfil();
-        //Button_formu();
+        Button_formu();
         Button_lugar();
         Botton_mostrar();
         Reloj();
         boton_notificaciones();
-
         boton_donacione();
         donaciones_formun();
 
@@ -146,7 +147,18 @@ public class Generl extends AppCompatActivity {
          configuraicon.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 startActivity(new Intent(Generl.this, Formulario_Registro.class));
+                 AlertDialog show = new AlertDialog.Builder(Generl.this)
+                         .setTitle("Confirmar salida")
+                         .setMessage("¿Estás seguro de que deseas salir?")
+                         .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                             @Override
+                             public void onClick(DialogInterface dialog, int which) {
+                                 finishAffinity(); // Cierra todas las actividades
+                                 System.exit(0);   // Cierra la aplicación
+                             }
+                         })
+                         .setNegativeButton("No", null)
+                         .show();
              }
          });
      }

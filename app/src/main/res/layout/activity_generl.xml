@@ -174,7 +174,7 @@
                                 android:id="@+id/textView40"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Historial"
+                                android:text="Historial de Donaciones"
                                 android:textAlignment="center" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -215,7 +215,7 @@
                                 android:id="@+id/textView45"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Historial"
+                                android:text="Proxima Donación"
                                 android:textAlignment="center" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -431,13 +431,13 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
-                        app:srcCompat="@drawable/configuraciones" />
+                        app:srcCompat="@drawable/cerrar_sesion_alt" />
 
                     <TextView
                         android:id="@+id/textView12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Registro"
+                        android:text="Salir"
                         android:textAlignment="center" />
 
                 </LinearLayout>

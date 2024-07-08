@@ -59,31 +59,24 @@ public class Donacion extends AppCompatActivity {
         Retrofit retrofitDon= RetrofitFactory.build();
         DonadoresService serviceDon=retrofitDon.create(DonadoresService.class);
         Donacion_Const donaciones = new Donacion_Const();
-        try {
-            // Convertir la fecha de string a Date
-            String fechaStr = fechadedonacion.getText().toString();
-            Date fechaDate = dateFormat.parse(fechaStr);
-            // Establecer los valores en donaciones
-            donaciones.setFechadedonacion(fechaDate);
-            donaciones.setLugardedonacion(lugardedonacion.getText().toString());
-            donaciones.setHoradedonacion(horadedonacion.getText().toString());
-            Call<Donacion_Const> call = serviceDon.PostCrearDonacion(donaciones);
-            call.enqueue(new Callback<Donacion_Const>() {
+        // Convertir la fecha de string a Date
+        // Establecer los valores en donaciones
+        donaciones.setFechadedonacion(fechadedonacion.getText().toString());
+        donaciones.setLugardedonacion(lugardedonacion.getText().toString());
+        donaciones.setHoradedonacion(horadedonacion.getText().toString());
+        Call<Donacion_Const> call = serviceDon.PostCrearDonacion(donaciones);
+        call.enqueue(new Callback<Donacion_Const>() {
 
-                @Override
-                public void onResponse(Call<Donacion_Const> call, Response<Donacion_Const> response) {
-                    Log.i("CONEXION", new Gson().toJson(response.body()));
-                    startActivity(new Intent(Donacion.this, Generl.class));
-                }
+            @Override
+            public void onResponse(Call<Donacion_Const> call, Response<Donacion_Const> response) {
+                Log.i("CONEXION", new Gson().toJson(response.body()));
+                startActivity(new Intent(Donacion.this, Generl.class));
+            }
 
-                @Override
-                public void onFailure(Call<Donacion_Const> call, Throwable t) {
-                    Log.e("CONEXION","No hay conexion");
-                }
-            });
-        }catch (ParseException e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Formato de fecha inválido. Use YYYY-MM-DD.", Toast.LENGTH_SHORT).show();
-        }
+            @Override
+            public void onFailure(Call<Donacion_Const> call, Throwable t) {
+                Log.e("CONEXION","No hay conexion");
+            }
+        });
     }
 }
