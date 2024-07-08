@@ -118,9 +118,6 @@ public class MasNoticias extends AppCompatActivity {
                     rv.setHasFixedSize(true);
                     rv.setAdapter(adapter);
 
-
-
-
                 }
             }
 

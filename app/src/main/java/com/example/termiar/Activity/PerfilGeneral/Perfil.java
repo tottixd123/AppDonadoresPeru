@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.termiar.Activity.General.Generl;
 import com.example.termiar.Activity.Mapa.Map_donaciones;
+import com.example.termiar.Donacion.DonacionMostar;
 import com.example.termiar.Donacion.UltimaDonacion;
 import com.example.termiar.R;
 
@@ -25,6 +26,8 @@ public class Perfil extends AppCompatActivity {
         Boton_centros();
         Boton_salir();
         BotonUltima();
+        BotonDonaciones();
+        BotonPerfilBus();
     }
 
     private void Boton_salir() {
@@ -54,6 +57,26 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Perfil.this, Map_donaciones.class));
+            }
+        });
+    }
+
+    private void BotonDonaciones(){
+        ConstraintLayout BotonDONAS = findViewById(R.id.btn_donas);
+        BotonDONAS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Perfil.this, DonacionMostar.class));
+            }
+        });
+    }
+
+    private void BotonPerfilBus(){
+        ConstraintLayout BotonPer = findViewById(R.id.btn_perfils);
+        BotonPer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Perfil.this, PerfilUltimo.class));
             }
         });
     }

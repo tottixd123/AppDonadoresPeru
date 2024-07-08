@@ -28,7 +28,7 @@ import com.example.termiar.Formulario.MostarFormularios;
 import com.example.termiar.R;
 
 public class Notifi extends AppCompatActivity {
-<<<<<<< HEAD
+
     /*
 =======
     private static final int MY_PERMISSIONS_REQUEST_VIBRATE = 1;
@@ -107,6 +107,6 @@ public class Notifi extends AppCompatActivity {
     */
 
 }
-=======
-}
->>>>>>> RamaFlaca
+
+
+

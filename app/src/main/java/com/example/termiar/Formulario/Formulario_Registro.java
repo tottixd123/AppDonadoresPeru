@@ -80,11 +80,10 @@ public class Formulario_Registro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (cb_acepto_terminos.isChecked()){
-<<<<<<< HEAD
+
                     guardarFormulario();
                     startActivity(new Intent(Formulario_Registro.this, Generl.class));
-=======
->>>>>>> RamaFlaca
+
 
                     guardarFormulario();
                     // Guardar en SharedPreferences que los términos han sido aceptados

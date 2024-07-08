@@ -20,6 +20,12 @@
         android:theme="@style/Theme.Termiar"
         tools:targetApi="31">
         <activity
+            android:name=".Campanas.CampanaMostrar"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PerfilGeneral.PerfilUltimo"
+            android:exported="false" />
+        <activity
             android:name=".Donacion.UltimaDonacion"
             android:exported="false" />
         <activity

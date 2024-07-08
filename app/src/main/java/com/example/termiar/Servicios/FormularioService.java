@@ -1,5 +1,6 @@
 package com.example.termiar.Servicios;
 
+import com.example.termiar.Donacion.Donacion_Const;
 import com.example.termiar.Formulario.Formulario;
 
 import java.util.List;
@@ -21,6 +22,10 @@ public interface FormularioService {
 
     @DELETE
     Call<Formulario>  delete(Formulario formulario);
+
+    @GET("formularios")
+    Call<List<Formulario>> getRecordsFormu(@Query("limit") int limit, @Query("order") String order);
+
 
 
 

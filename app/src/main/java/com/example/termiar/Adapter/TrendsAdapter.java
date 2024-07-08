@@ -106,15 +106,6 @@ public class TrendsAdapter  extends RecyclerView.Adapter<TrendsAdapter.Viewholde
             }
         });
 
-        /*
-        int drawableResourceId = view.getResources().getIdentifier(noticia.getImagen(),"drawable",view.getContext().getPackageName());
-
-        /*
-        Glide.with(view.getContext())
-                .load(drawableResourceId)
-                .transform(new GranularRoundedCorners(30,30,0,0))
-                .into(imagen);*/
-
     }
 
     class Viewholder extends RecyclerView.ViewHolder{
@@ -123,65 +114,4 @@ public class TrendsAdapter  extends RecyclerView.Adapter<TrendsAdapter.Viewholde
         }
     }
 
-    /*
-
-
-    ArrayList<TrendSDomain> items;
-    Context context;
-
-    public TrendsAdapter(ArrayList<TrendSDomain> items) {
-        this.items = items;
-    }
-
-    @NonNull
-    @Override
-    public TrendsAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View inflator= LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_trend_list,parent,false);
-        context = parent.getContext();
-        return new Viewholder(inflator);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull TrendsAdapter.Viewholder holder, int position) {
-
-    holder.title.setText(items.get(position).getTitle());
-    holder.descripcion.setText(items.get(position).getDescripcion());
-
-    int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getImagen(),"drawable",holder.itemView.getContext().getPackageName());
-    Glide.with(holder.itemView.getContext())
-            .load(drawableResourceId)
-            .transform(new GranularRoundedCorners(30,30,0,0))
-            .into(holder.imagen);
-
-    Picasso.get().load(peli.img).into(holder.imagen);
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return items.size();
-    }
-
-    public class Viewholder extends RecyclerView.ViewHolder{
-        TextView title, descripcion;
-        ImageView imagen;
-        public Viewholder(@NonNull View itemView) {
-            super(itemView);
-            title = itemView.findViewById(R.id.titleTxt);
-            descripcion = itemView.findViewById(R.id.subtitleTxt);
-            imagen = itemView.findViewById(R.id.pic);
-        }
-    }
-
-     */
-
-    /*
-    int drawableResourceId = holder.itemView.getResources().getIdentifier(items.get(position).getImagen(),"drawable",holder.itemView.getContext().getPackageName());
-    Glide.with(holder.itemView.getContext())
-            .load(drawableResourceId)
-            .transform(new GranularRoundedCorners(30,30,0,0))
-            .into(holder.imagen);
-
-
-     */
 }
