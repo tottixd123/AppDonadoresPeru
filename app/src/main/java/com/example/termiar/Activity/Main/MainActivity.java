@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-
-import com.example.termiar.Activity.General.Generl;
 import com.example.termiar.Formulario.Formulario_Registro;
 import com.example.termiar.R;
 

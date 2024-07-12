@@ -31,6 +31,9 @@ public class NotificationDetails {
     }
 
     public void showNotification() {
+        if (!context.getSharedPreferences("timer_prefs", Context.MODE_PRIVATE).getBoolean("notifications_enabled", true)) {
+            return;//no mostar notifiaciones si estan desacativadas
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.POST_NOTIFICATIONS)
                     == PackageManager.PERMISSION_GRANTED) {
