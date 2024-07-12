@@ -7,49 +7,111 @@
     android:layout_height="match_parent"
     tools:context=".Donacion.UltimaDonacion">
 
-    <TextView
-        android:id="@+id/textView658"
-        android:layout_width="375dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="64dp"
-        android:text="Ultima Donación"
-        android:textColor="@color/dark_blue"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#91C2D8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="461dp"
+            android:layout_height="58dp"
+            android:backgroundTint="#FDF6FE"
+            android:src="@drawable/borde_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView658"
+            android:layout_width="375dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginTop="36dp"
+            android:text="Ultima Donación"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="188dp"
+            android:layout_height="165dp"
+            android:src="@drawable/avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView658" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/regresarperf"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background_oval_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         app:layout_goneMarginStart="32dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="32dp"
+=======
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="141dp"
+>>>>>>> RamaFlaca
         android:padding="8dp"
-        android:text="Fecha de Donacion "
+        android:text="Fecha de Donación "
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/fechadedonacion"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <TextView
         android:id="@+id/fechadedonacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="198dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="115dp"
         android:padding="8dp"
+<<<<<<< HEAD
+=======
+
+>>>>>>> RamaFlaca
         android:text="Fecha de Donacion"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/textView658"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
@@ -65,27 +127,33 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+=======
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+>>>>>>> RamaFlaca
         android:id="@+id/lugardedonacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="229dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="115dp"
         android:padding="8dp"
         android:text="Lugar de Donacion"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fechadedonacion"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginStart="32dp"
         android:layout_marginBottom="24dp"
         android:padding="8dp"
@@ -93,25 +161,53 @@
         android:text="Hora De Donacion"
         app:layout_constraintBottom_toTopOf="@+id/horadedonacion"
         app:layout_constraintStart_toStartOf="parent" />
+=======
+
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="153dp"
+        android:padding="8dp"
+        android:text="Hora De Donacion"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lugardedonacion" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="148dp"
+        android:padding="8dp"
+        android:text="Lugar de Donación"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechadedonacion" />
+>>>>>>> RamaFlaca
 
     <TextView
         android:id="@+id/horadedonacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="244dp"
-        android:layout_marginBottom="277dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="126dp"
         android:padding="8dp"
         android:text="Hora de Donacion"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lugardedonacion"
         app:layout_constraintVertical_bias="0.0"
+=======
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+>>>>>>> RamaFlaca
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -119,7 +215,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="197dp"
         app:backgroundTint="@color/white"
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="50dp"
@@ -128,8 +223,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/horadedonacion"
         app:layout_constraintVertical_bias="1.0"
+=======
+>>>>>>> RamaFlaca
         tools:ignore="BottomAppBar">
 
         <LinearLayout

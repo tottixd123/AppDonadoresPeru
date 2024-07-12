@@ -22,6 +22,12 @@ import com.example.termiar.R;
 
 public class Notifi extends AppCompatActivity {
 
+<<<<<<< HEAD
+=======
+
+    private static final int MY_PERMISSIONS_REQUEST_VIBRATE = 1;
+
+>>>>>>> RamaFlaca
 
 
     private static final int MY_PERMISSIONS_REQUEST_VIBRATE = 1;
@@ -57,7 +63,6 @@ public class Notifi extends AppCompatActivity {
             finish();
         }
     }
-
     private void showNotification() {
         try {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "CANAL_ID")
@@ -96,7 +101,10 @@ public class Notifi extends AppCompatActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> RamaFlaca
 
 }
 

@@ -8,6 +8,9 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
 
     <application
         android:allowBackup="true"
@@ -19,6 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Termiar"
         tools:targetApi="31">
+
         <activity
             android:name=".Campanas.CampanaMostrar"
             android:exported="false" />
@@ -31,8 +35,16 @@
             android:exported="false" />
         <activity
             android:name=".Activity.Reloj.Cronometro"
+            android:launchMode="singleTop"
             android:exported="false"
             android:theme="@style/Theme.Termiar" />
+        <receiver android:name=".Activity.Reloj.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
         <activity
             android:name=".Activity.VerMasNoticias.MasNoticias"
             android:exported="false" />
@@ -40,12 +52,12 @@
             android:name=".Donacion.DonacionMostar"
             android:exported="false" />
         <activity android:name=".Donacion.Donacion" />
-
         <service
             android:name=".Activity.Reloj.TimerService"
             android:enabled="true"
-            android:exported="false" />
-
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            tools:ignore="ForegroundServicePermission" />
         <activity
             android:name=".Notificaciones.Notifi"
             android:exported="false" />
@@ -76,5 +88,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

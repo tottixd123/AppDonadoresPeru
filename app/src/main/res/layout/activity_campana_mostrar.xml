@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="41dp"
     tools:context=".Campanas.CampanaMostrar">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -12,13 +13,14 @@
         android:layout_width="400dp"
         android:layout_height="723dp"
         tools:ignore="MissingConstraints"
+        android:textAlignment="center"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="@+id/campanaRecy"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 

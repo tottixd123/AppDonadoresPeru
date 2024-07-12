@@ -42,8 +42,8 @@ public class PerfilUltimo extends AppCompatActivity {
         });
 
         usuario = findViewById(R.id.usuario);
-        //talla = findViewById(R.id.talla);
-        //peso = findViewById(R.id.peso);
+        talla = findViewById(R.id.talla);
+        peso = findViewById(R.id.peso);
         sexo = findViewById(R.id.sexo);
         tipoSangre23 = findViewById(R.id.tipoSangre23);
         fechaUltimaDonacion65 = findViewById(R.id.fechaUltimaDonacion65);
@@ -67,8 +67,8 @@ public class PerfilUltimo extends AppCompatActivity {
                     if (!records.isEmpty()) {
                         Formulario latestRecord = records.get(records.size() - 1);
                         usuario.setText(latestRecord.getUsuario());
-                        //talla.setText(Double.toString(latestRecord.getTalla()));
-                        //peso.setText(Double.toString(latestRecord.getPeso()));
+                        talla.setText(Double.toString(latestRecord.getTalla()));
+                        peso.setText(Double.toString(latestRecord.getPeso()));
                         sexo.setText(latestRecord.getSexo());
                         tipoSangre23.setText(latestRecord.getTipoSangre());
                         fechaUltimaDonacion65.setText(latestRecord.getFechaUltimaDonacion());

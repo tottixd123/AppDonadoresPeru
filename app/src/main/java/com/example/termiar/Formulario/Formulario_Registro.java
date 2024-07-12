@@ -99,8 +99,6 @@ public class Formulario_Registro extends AppCompatActivity {
                 }
             }
         });
-
-
     }
     private void  setupSpinner(Spinner spinner,int arrayResource){
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,arrayResource, android.R.layout.simple_spinner_item);
