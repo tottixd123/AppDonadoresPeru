@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Formulario.Formulario_Registro">
+
+
+    <EditText
+        android:id="@+id/et_usuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Ingrese un Usuario"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_talla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Ingrese su talla (cm)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_usuario"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_peso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Ingrese su peso (kg)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_talla"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Spinner
+        android:id="@+id/spinner_sexo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_spinner"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_peso"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_fecha_ultima_donacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Ingrese fecha de última donación"
+        android:inputType="date"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_sexo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Spinner
+        android:id="@+id/spinner_tipo_sangre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_spinner"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_fecha_ultima_donacion"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <CheckBox
+        android:id="@+id/cb_impedimentos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tengo impedimentos para donar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_tipo_sangre"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <CheckBox
+        android:id="@+id/cb_acepto_terminos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Acepto los términos y condiciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_impedimentos"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/design_default_color_primary_variant"
+        android:padding="12dp"
+        android:text="Realizar Registro"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/cb_acepto_terminos"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="331dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="Formulario de Registro de Usuario"
+        android:textColor="@color/dark_blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

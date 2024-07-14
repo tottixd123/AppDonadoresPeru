@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PerfilGeneral.PerfilUltimo">
+
+    <TextView
+        android:id="@+id/textView65r8"
+        android:layout_width="298dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="48dp"
+        android:text="PERFIL"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView65r8">
+
+        <LinearLayout
+            android:layout_width="433dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="3mm"
+                android:textColor="@color/dark_blue"
+                android:text="Usuario: "
+                app:layout_constraintTop_toBottomOf="@+id/textView65r8"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:id="@+id/usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="14dp"
+                android:text="AQUI"
+                app:layout_constraintStart_toEndOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/textView65r8" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textSize="3mm"
+                android:textColor="@color/dark_blue"
+                android:text="Talla: "
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="31dp" />
+
+            <TextView
+                android:id="@+id/talla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="14dp"
+                android:text="AQUI"
+                app:layout_constraintStart_toEndOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/usuario"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textSize="3mm"
+                android:textColor="@color/dark_blue"
+                android:text="Peso: "
+                app:layout_constraintTop_toBottomOf="@+id/textView22"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:id="@+id/peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="196dp"
+                android:layout_marginTop="14dp"
+                android:text="AQUI"
+                app:layout_constraintStart_toEndOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/talla"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textSize="3mm"
+                android:textColor="@color/dark_blue"
+                android:text="Sexo: "
+                app:layout_constraintTop_toBottomOf="@+id/textView23"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:id="@+id/sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="196dp"
+                android:layout_marginTop="14dp"
+                android:text="AQUI"
+                app:layout_constraintStart_toEndOf="@+id/textView24"
+                app:layout_constraintTop_toBottomOf="@+id/peso"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textSize="3mm"
+                android:textColor="@color/dark_blue"
+                android:text="Tipo de Sangre: "
+                app:layout_constraintTop_toBottomOf="@+id/textView24"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:id="@+id/tipoSangre23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="196dp"
+                android:layout_marginTop="14dp"
+                android:text="AQUI"
+                app:layout_constraintStart_toEndOf="@+id/textView25"
+                app:layout_constraintTop_toBottomOf="@+id/sexo"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textSize="3mm"
+                android:textColor="@color/dark_blue"
+                android:text="Fecha de la Ultima Donacion: "
+                app:layout_constraintTop_toBottomOf="@+id/textView25"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:id="@+id/fechaUltimaDonacion65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="196dp"
+                android:layout_marginTop="14dp"
+                android:text="AQUI"
+                app:layout_constraintStart_toEndOf="@+id/textView26"
+                app:layout_constraintTop_toBottomOf="@+id/tipoSangre23"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

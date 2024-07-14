@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_logos"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logos_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Termiar"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".Activity.Main.SplashInicio"
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Campanas.CampanaMostrar"
+            android:exported="false" />
+
+        <activity
+            android:name=".Activity.PerfilGeneral.PerfilUltimo"
+            android:exported="false" />
+        <activity
+            android:name=".Donacion.UltimaDonacion"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Reloj.Cronometro"
+            android:launchMode="singleTop"
+            android:exported="false"
+            android:theme="@style/Theme.Termiar" />
+        <receiver android:name=".Activity.Reloj.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".Activity.VerMasNoticias.MasNoticias"
+            android:exported="false" />
+        <activity
+            android:name=".Donacion.DonacionMostar"
+            android:exported="false" />
+        <activity android:name=".Donacion.Donacion" />
+        <service
+            android:name=".Activity.Reloj.TimerService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            tools:ignore="ForegroundServicePermission" />
+        <activity
+            android:name=".Notificaciones.Notifi"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCFQ73GZBBxR4sRKi85ZcEgEoRMJzRkQp8" /> <!-- BroadcastReceiver para detectar cambios en la conectividad -->
+        <activity android:name=".Formulario.MostarFormularios" />
+        <activity
+            android:name=".Activity.Mapa.Map_donaciones"
+            android:exported="true"
+            android:label="@string/title_activity_map_donaciones" />
+        <activity
+            android:name=".Formulario.Formulario_Registro"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.PerfilGeneral.Perfil"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.General.Generl"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.Main.MainActivity"
+            android:exported="true">
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+    </application>
+</manifest>
